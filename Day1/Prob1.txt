@@ -1,0 +1,16 @@
+function differenceInAges(ages){
+  let max = ages[0];
+  let min = ages[0];
+  
+  for(let i = 0; i<ages.length; i++)
+  {
+    if(max < ages[i]) max = ages[i]
+    if(min > ages[i]) min = ages[i];
+  }
+  
+  diff = max - min;
+  return [min, max, diff];
+}
+
+
+https://www.codewars.com/kata/5720a1cb65a504fdff0003e2/train/javascript

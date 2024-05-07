@@ -1,0 +1,25 @@
+function duplicateEncode(word){
+  word = word.toLowerCase()
+  let count = [];
+  let res = ""
+  
+  for(var i = 0; i < word.length; i++)
+  {
+    count = 0;
+    for(var j = 0; j < word.length; j++)
+    {
+      if(word[i] === word[j])
+        count++;
+      if(count > 1)
+        break
+    }
+    if(count > 1)
+      res = res + ")";
+    else
+      res = res + "(";
+  }
+  return res;
+}
+
+
+https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/javascript
